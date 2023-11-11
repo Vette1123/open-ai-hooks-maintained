@@ -9,3 +9,6 @@
 
 # Ignore the "example" folder
 example/
+node_modules/
+test/
+src/
