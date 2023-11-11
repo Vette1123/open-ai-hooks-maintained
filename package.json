@@ -1,6 +1,6 @@
 {
   "name": "open-ai-hooks-maintained",
-  "version": "1.1.3",
+  "version": "1.1.4",
   "description": "a maintained version of open-ai-hooks repo",
   "main": "dist/index.js",
   "module": "dist/index.js",

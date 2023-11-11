@@ -21,11 +21,11 @@ coverage/
 .env.test.local
 .env.production.local
 .eslintignore
-.eslintrc.js
+.eslintrc.cjs
 .gitignore
 .prettierrc.json
-.prettieriignore
-tscconfig.json
+.prettierignore
+tsconfig.json
 tsconfig.test.json
 vite.config.ts
 yarn.lock
