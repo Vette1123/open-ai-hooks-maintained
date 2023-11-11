@@ -19,7 +19,7 @@ const ExampleComponent = () => {
   const { messages, submitPrompt } = useChatCompletion({
     // latest 3.5 turbo model
     model: 'gpt-3.5-turbo-1106',
-    apiKey: process.env.VITE_OPENAI_API_KEY as string,
+    apiKey: import.meta.env.VITE_OPENAI_API_KEY,
     temperature: 0.9,
   });
 

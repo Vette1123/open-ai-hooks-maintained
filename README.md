@@ -4,7 +4,9 @@
 >
 > **All models based on GPT3.5 and GPT4 are supported!**
 
-Provides a [custom React Hook](https://react.dev/learn/reusing-logic-with-custom-hooks) capable of calling OpenAI Chat Completions APIs with [streaming support](https://github.com/openai/openai-cookbook/blob/main/examples/How_to_stream_completions.ipynb) enabled by [ReadableStreams](https://developer.mozilla.org/en-US/docs/Web/API/ReadableStream).
+> **This repo is based on [jonrhall](https://github.com/jonrhall/openai-streaming-hooks) work, but he's not maintaining it anymore, so i'll be working on maintaining it.**
+
+> Provides a [custom React Hook](https://react.dev/learn/reusing-logic-with-custom-hooks) capable of calling OpenAI Chat Completions APIs with [streaming support](https://github.com/openai/openai-cookbook/blob/main/examples/How_to_stream_completions.ipynb) enabled by [ReadableStreams](https://developer.mozilla.org/en-US/docs/Web/API/ReadableStream).
 
 The library then decorates every Completion response with metadata about the transaction such as:
 
