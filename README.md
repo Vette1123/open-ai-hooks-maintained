@@ -190,4 +190,3 @@ npm run example
 - This package accepts contributions in the form of Pull Requests against the `main` branch.
 - Please follow the coding format as put forth in the ESLint and Prettier definitions used in the package.
 - Passing unit tests for all new code/functionality also is greatly appreciated, if not mandatory for PR acceptance in most cases.
-- Before contributing, please see our developer [Code of Conduct](https://github.com/jonrhall/openai-streaming-hooks/blob/main/CODE_OF_CONDUCT.md).
