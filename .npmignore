@@ -1,0 +1,11 @@
+# Ignore all images and gifs
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.bmp
+*.svg
+*.ico
+
+# Ignore the "example" folder
+example/
