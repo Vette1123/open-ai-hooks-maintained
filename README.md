@@ -29,13 +29,13 @@ See section on [running the example](#running-the-example) for more information.
 1. Install the OpenAI Streaming Hooks library via a package manager like `npm` or `yarn`:
 
 ```bash
-npm install --save openai-streaming-hooks
+npm install --save open-ai-hooks-maintained
 ```
 
 2. Import the hook and use it:
 
 ```tsx
-import { useChatCompletion } from 'openai-streaming-hooks';
+import { useChatCompletion } from 'open-ai-hooks-maintained';
 
 const Component = () => {
   const { messages, submitPrompt } = useChatCompletion({
