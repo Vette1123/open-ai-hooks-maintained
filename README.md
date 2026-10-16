@@ -75,7 +75,7 @@ const {
 There are two main types of completions available from OpenAI:
 
 1. [Chat Completions](https://platform.openai.com/docs/guides/chat), which includes models like `gpt-4` and `gpt-3.5-turbo`.
-2. [Text Completions](https://platform.openai.com/docs/guides/completion), which includes models like `text-davinci-003`.
+2. [Text Completions](https://developers.openai.com/api/reference/resources/completions), which includes models like `text-davinci-003`.
 
 There are some pretty big fundamental differences in the way these models are supported on the API side. Chat Completions consider the context of previous messages when making the next completion. Text Completions only consider the context passed into the explicit message it is currently answering.
 
