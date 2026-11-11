@@ -1,14 +1,14 @@
 # OpenAI Streaming Hooks
 
-> Talk directly to [OpenAI Completion APIs](https://platform.openai.com/docs/api-reference/chat) and stream the response back in real-time in the browser--no server required.
+> Talk directly to [OpenAI Completion APIs](https://platform.openai.com/docs/api-reference/chat) and stream the response back in real time in the browser, with no server required.
 >
-> **All models based on GPT3.5 and GPT4 are supported!**
+> All models based on GPT3.5 and GPT4 are supported.
 
-> **This repo is based on [jonrhall](https://github.com/jonrhall/openai-streaming-hooks) work, but he's not maintaining it anymore, so i'll be working on maintaining it.**
+> **This repo is based on [jonrhall](https://github.com/jonrhall/openai-streaming-hooks) work, but he no longer maintains it, so I'm maintaining it now.**
 
-> Provides a [custom React Hook](https://react.dev/learn/reusing-logic-with-custom-hooks) capable of calling OpenAI Chat Completions APIs with [streaming support](https://github.com/openai/openai-cookbook/blob/main/examples/How_to_stream_completions.ipynb) enabled by [ReadableStreams](https://developer.mozilla.org/en-US/docs/Web/API/ReadableStream).
+> Provides a [custom React Hook](https://react.dev/learn/reusing-logic-with-custom-hooks) that calls OpenAI Chat Completions APIs with [streaming support](https://github.com/openai/openai-cookbook/blob/main/examples/How_to_stream_completions.ipynb) enabled by [ReadableStreams](https://developer.mozilla.org/en-US/docs/Web/API/ReadableStream).
 
-The library then decorates every Completion response with metadata about the transaction such as:
+The library then adds metadata about the transaction to every Completion response, such as:
 
 - The number of tokens used in the response
 - The total time it took to complete the request
@@ -77,9 +77,9 @@ There are two main types of completions available from OpenAI:
 1. [Chat Completions](https://platform.openai.com/docs/guides/chat), which includes models like `gpt-4` and `gpt-3.5-turbo`.
 2. [Text Completions](https://developers.openai.com/api/reference/resources/completions), which includes models like `text-davinci-003`.
 
-There are some pretty big fundamental differences in the way these models are supported on the API side. Chat Completions consider the context of previous messages when making the next completion. Text Completions only consider the context passed into the explicit message it is currently answering.
+These models are supported differently on the API side. Chat Completions consider the context of previous messages when making the next completion. Text Completions only consider the context passed into the explicit message it is currently answering.
 
-For more information on chat vs. text completion models, see [LangChain's excellent blog post on the topic](https://blog.langchain.dev/chat-models/).
+For more information on chat vs. text completion models, see [LangChain's blog post on the topic](https://blog.langchain.dev/chat-models/).
 
 ### Chat Completions
 
@@ -137,13 +137,13 @@ New chunks of the message will appear in the `meta.chunks` list and your React c
 
 ### Aborting responses
 
-If a prompt has been submitted and the response is still being streamed back to the client, it is possible to invoke the `abortResponse` function to stop the response stream from continuing. This function will only work if the request is in progress.
+If a prompt has been submitted and the response is still being streamed back to the client, you can call the `abortResponse` function to stop the response stream from continuing. This function will only work if the request is in progress.
 
 ## Setting Message List
 
-The hook exposes a `setMessages` function which will overwrite any existing messages
+The hook exposes a `setMessages` function which will overwrite any existing messages.
 
-This function will not set the messages list is a chat complete request is in progress.
+This function will not set the messages list if a chat completion request is in progress.
 
 ## Resetting Message List
 
@@ -189,4 +189,4 @@ npm run example
 
 - This package accepts contributions in the form of Pull Requests against the `main` branch.
 - Please follow the coding format as put forth in the ESLint and Prettier definitions used in the package.
-- Passing unit tests for all new code/functionality also is greatly appreciated, if not mandatory for PR acceptance in most cases.
+- Please include passing unit tests for all new code and functionality. They are mandatory for PR acceptance in most cases.
