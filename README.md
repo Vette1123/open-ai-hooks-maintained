@@ -4,7 +4,7 @@
 >
 > All models based on GPT3.5 and GPT4 are supported.
 
-> **This repo is based on [jonrhall](https://github.com/jonrhall/openai-streaming-hooks) work, but he no longer maintains it, so I'm maintaining it now.**
+> Forked from [jonrhall/openai-streaming-hooks](https://github.com/jonrhall/openai-streaming-hooks), which is no longer maintained. This fork keeps it up to date.
 
 > Provides a [custom React Hook](https://react.dev/learn/reusing-logic-with-custom-hooks) that calls OpenAI Chat Completions APIs with [streaming support](https://github.com/openai/openai-cookbook/blob/main/examples/How_to_stream_completions.ipynb) enabled by [ReadableStreams](https://developer.mozilla.org/en-US/docs/Web/API/ReadableStream).
 
@@ -18,15 +18,15 @@ The library then adds metadata about the transaction to every Completion respons
 
 ## Example
 
-![Usage example](https://github.com/jonrhall/openai-streaming-hooks/blob/main/example/example.gif)
+![Usage example](https://github.com/Vette1123/open-ai-hooks-maintained/blob/main/example/example.gif)
 
-[Example code here](https://github.com/jonrhall/openai-streaming-hooks/blob/main/example/example.tsx)
+[Example code here](https://github.com/Vette1123/open-ai-hooks-maintained/blob/main/example/example.tsx)
 
 See section on [running the example](#running-the-example) for more information.
 
 ## Use
 
-1. Install the OpenAI Streaming Hooks library via a package manager like `npm` or `yarn`:
+1. Install the library via a package manager like `npm` or `yarn`:
 
 ```bash
 npm install --save open-ai-hooks-maintained
@@ -75,7 +75,7 @@ const {
 There are two main types of completions available from OpenAI:
 
 1. [Chat Completions](https://platform.openai.com/docs/guides/chat), which includes models like `gpt-4` and `gpt-3.5-turbo`.
-2. [Text Completions](https://developers.openai.com/api/reference/resources/completions), which includes models like `text-davinci-003`.
+2. [Text Completions](https://developers.openai.com/api/reference/resources/completions), which use older instruct models. These are not supported by this package.
 
 These models are supported differently on the API side. Chat Completions consider the context of previous messages when making the next completion. Text Completions only consider the context passed into the explicit message it is currently answering.
 
@@ -154,8 +154,8 @@ If the `resetMessages` function is called the messages list will be set back to 
 1. Clone this package locally and navigate to it:
 
 ```bash
-git clone https://github.com/jonrhall/openai-streaming-hooks.git
-cd openai-streaming-hooks
+git clone https://github.com/Vette1123/open-ai-hooks-maintained.git
+cd open-ai-hooks-maintained
 ```
 
 2. Export your [OpenAI API Key](https://platform.openai.com/account/api-keys) as environment variable `VITE_OPENAI_API_KEY`:
@@ -170,7 +170,7 @@ export VITE_OPENAI_API_KEY=your-key-here
 npm run example
 ```
 
-4. Navigate to `https://localhost:5179` to see the live example.
+4. Open the URL Vite prints (by default `http://localhost:5173`) to see the live example.
 
 ## Contributors
 
